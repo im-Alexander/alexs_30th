@@ -21,9 +21,13 @@ document.querySelector(".submitButton").addEventListener("click", function () {
         submitButton.classList.add("invisible");
         resetButton.classList.remove("invisible");
         userGuess.value = "";
+    } else {
+        message.innerHTML = "Sorry I don't understand that (⊙_⊙)？";
+        guesses--;
     }
 });
 
+// reset button click
 document.querySelector(".resetButton").addEventListener("click", function () {
     message.classList.remove("victory");
     message.innerHTML = "Welcome back I got a new number!";

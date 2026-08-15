@@ -1,6 +1,5 @@
 body {
-    background-color: #77E4C8;
-    color: #4535C1;
+    background-color: #bfffef;
 }
 
 hr {
@@ -30,7 +29,7 @@ ol {
 .sectionHeader {
     margin-top: 0%;
     margin-bottom: 1%;
-    color: #478CCF;
+    color: #4535C1;
 }
 
 .title {

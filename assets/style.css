@@ -49,3 +49,21 @@ ol {
     text-align: center;
     font-size: 2em;
 }
+
+.responseMessage {
+    width: auto;
+    color: black;
+    margin: 10px;
+}
+
+.highLowDiv {
+    text-align: center;
+}
+
+.victory {
+    font-size: xx-large;
+}
+
+.invisible {
+    display: none;
+}

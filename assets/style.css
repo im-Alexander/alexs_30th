@@ -15,15 +15,18 @@ ol {
     padding-left: 20px;
 }
 
+.container {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 .logoImg {
     height: 70px;
     float: right;
 }
 
 .mapImg {
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50vw;
+    width: 60vw;
 }
 
 .sectionHeader {
@@ -64,11 +67,28 @@ ol {
 }
 
 .firstTryImage {
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50vw;
+    width: 60vw;
 }
 
 .invisible {
     display: none;
+}
+
+@media (max-width: 800px) {
+    .container {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .mapImg {
+        width: 50vw;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .firstTryImage {
+        width: 50vw;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
 }

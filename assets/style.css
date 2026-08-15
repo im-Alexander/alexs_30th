@@ -63,6 +63,12 @@ ol {
     font-size: xx-large;
 }
 
+.firstTryImage {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50vw;
+}
+
 .invisible {
     display: none;
 }

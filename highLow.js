@@ -4,18 +4,29 @@ var guesses = 0;                                                    // keeps tra
 var message = document.querySelector(".responseMessage");           // the display message
 var submitButton = document.querySelector(".submitButton");         // the guess button
 var resetButton = document.querySelector(".resetButton");           // the guess button
+var victoryPuppy = document.querySelector(".firstTryImage");        // dancing dog gif
 
 // submit button click
 document.querySelector(".submitButton").addEventListener("click", function () {
     var userGuess = document.getElementById("numberInput"); // the user's guess
     guesses++;
 
-    if (userGuess.valueAsNumber > randomNumber) {
-        message.innerHTML = userGuess.value + " is too high!";
+    if (userGuess.valueAsNumber > 100) {
+        message.innerHTML = "You're higher than Snoop Dogg! ⛰️";
+    } else if (userGuess.valueAsNumber < 1) {
+        message.innerHTML = "If you go lower you'll find gold! 💰";
+    } else if (userGuess.valueAsNumber > randomNumber) {
+        message.innerHTML = "⬇️ " + userGuess.value + " is too high, go lower ⬇️";
     } else if (userGuess.valueAsNumber < randomNumber) {
-        message.innerHTML = userGuess.value + " is too low!";
+        message.innerHTML = "⬆️ " + userGuess.value + " is too low, go higher ⬆️";
     } else if (userGuess.valueAsNumber == randomNumber) {
         message.innerHTML = "You got it in " + guesses + " tries!";
+
+        if (guesses == 1){
+            message.innerHTML = "You got it on your first try!<br />You must be a mind reader!";
+            victoryPuppy.classList.remove("invisible");
+        }
+
         message.classList.add("victory");
         userGuess.classList.add("invisible");
         submitButton.classList.add("invisible");
@@ -34,6 +45,7 @@ document.querySelector(".resetButton").addEventListener("click", function () {
     document.getElementById("numberInput").classList.remove("invisible");
     submitButton.classList.remove("invisible");
     resetButton.classList.add("invisible");
+    victoryPuppy.classList.add("invisible");
     randomNumber = Math.floor((Math.random() * 100) + 1);       // makes a new random number
     guesses = 0;
 });
